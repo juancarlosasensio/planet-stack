@@ -5,26 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
   </head>
+  {# Attempt at creating a base layout with Every-Layout.dev's primitives... we shall seeee! #}
   <body>
-    <header>
-      <h1>{{ title }}</h1>
-      {% if page.url !== '/' %}
-        <h2>
-          <a href="/">🌍🤖 Planet Stacks 🤖🌍</a>
-        </h2>
-      {% endif %}
-    </header>
-    <main>
-      {{ content | safe }}
-    </main>
-    <footer>
-      <div class="container">
+    <cover-l centered="main" space="var(--s1)" minHeight="100vh"  noPad>
+      {# header... #}
+      {# max	string	"var(--measure)"	A CSS max-width value
+        andText	boolean	false	Center align the text too (text-align: center)
+        gutters	boolean	0	The minimum space on either side of the content
+        intrinsic #}
+      {# <center-l max="var(--measure)" andText> #}
+      <header>
+        <h1>{{ title }}</h1>
+        {% if page.url !== '/' %}
+          <h2>
+            <a href="/">🌍🤖 Planet Stacks 🤖🌍</a>
+          </h2>
+        {% endif %}
+      </header>
+      {# </center-l> #}
+      {# horizontally-and-vertically-centered el... #}
+      {# <center-l max="var(--measure)"> #}
+      <main>
+        {{ content | safe }}
+      </main>
+      {# </center-l> #}
+      {# footer #}
+      <footer>
         <h4>Add Your Stack!</h4>
         <p>Learn how to contribute your stack by <a href="https://github.com/juancarlosasensio/planet-stack" target="_blank">visiting the repo ></a>
         </p>
-      </div>
-    </footer>
+      </footer>
+    </cover-l>
+    <script src="{{ 'js/main.js' | url }}" type="module"></script>
   </body>
 </html>
