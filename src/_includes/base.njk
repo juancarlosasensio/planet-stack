@@ -6,37 +6,39 @@
     <title>{{ title }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/variables.css"/>
-    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/utilities.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
   </head>
   {# Attempt at creating a base layout with Every-Layout.dev's primitives... we shall seeee! #}
   <body>
     <cover-l centered="main" space="var(--s1)" minHeight="100vh"  noPad>
       {# header... #}
-      {# max	string	"var(--measure)"	A CSS max-width value
-        andText	boolean	false	Center align the text too (text-align: center)
-        gutters	boolean	0	The minimum space on either side of the content
-        intrinsic #}
-      {# <center-l max="var(--measure)" andText> #}
       <header>
-        <h1>{{ title }}</h1>
-        {% if page.url !== '/' %}
-          <h2>
-            <a href="/">🌍🤖 Planet Stacks 🤖🌍</a>
-          </h2>
-        {% endif %}
+        <center-l max="var(--measure)" andText gutters>
+          <h1>{{ title }}</h1>
+          {% if page.url !== '/' %}
+            <h2>
+              <a href="/">🌍🤖 Planet Stacks 🤖🌍</a>
+            </h2>
+          {% endif %}
+        </center-l>
       </header>
       {# </center-l> #}
       {# horizontally-and-vertically-centered el... #}
       {# <center-l max="var(--measure)"> #}
       <main>
-        {{ content | safe }}
+        <center-l intrinsic>
+          {{ content | safe }}
+        </center-l>
       </main>
       {# </center-l> #}
       {# footer #}
       <footer>
-        <h4>Add Your Stack!</h4>
-        <p>Learn how to contribute your stack by <a href="https://github.com/juancarlosasensio/planet-stack" target="_blank">visiting the repo ></a>
-        </p>
+        <center-l max="100vw" intrinsic class="bg-red">
+          <h4>Add Your Stack!</h4>
+          <p>Learn how to contribute your stack by <a href="https://github.com/juancarlosasensio/planet-stack" target="_blank">visiting the repo ></a>
+          </p>
+        </center-l>
       </footer>
     </cover-l>
     <script src="{{ 'js/main.js' | url }}" type="module"></script>
