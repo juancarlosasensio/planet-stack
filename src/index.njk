@@ -4,8 +4,8 @@ title: Planet Stacks
 ---
 
 <article>
-  <h2 class="text-center">⚡️ Weekly Highlight ⚡️</h2>
-  <div class="columns">
+  <stack-l space="var(--s3)">
+    <h2 class="text-center">⚡️ Weekly Highlight ⚡️</h2>
     <ul>
       {% for stack in stacks | randomItem %}
         <li>
@@ -19,21 +19,23 @@ title: Planet Stacks
         </li>
       {% endfor %}
     </ul>
-  </div>
-  <div>
-    <p>
-      <a href="/about">About the project</a>
-    </p>
-    <p>
-      {% for stack in stacks | randomItem %}
-        {% if loop.first %}
-          {% set linkToStacks = stack.title %}
-        {% endif %}
-      {% endfor %}
-      {# How do I link to stacks without necesarilly knowing what the final page path will be? #}
-      <a href="/stacks">View all stacks!</a>
-    </p>
-  </div>
+    <center-l>
+      <box-l borderWidth="0px">
+        <p>
+          <a href="/about">About the project</a>
+        </p>
+        <p>
+          {% for stack in stacks | randomItem %}
+            {% if loop.first %}
+              {% set linkToStacks = stack.title %}
+            {% endif %}
+          {% endfor %}
+          {# How do I link to stacks without necesarilly knowing what the final page path will be? #}
+          <a href="/stacks">View all stacks!</a>
+        </p>
+      </box-l>
+    </center-l>
+  </stack-l>
 </article>
 
 {# {
