@@ -11,18 +11,18 @@
   </head>
   {# Attempt at creating a base layout with Every-Layout.dev's primitives... we shall seeee! #}
   <body>
-    <cover-l centered="main" space="var(--s1)" minHeight="100vh"  noPad>
+    <cover-l centered="main" space="var(--s2)"  noPad style="height: 100vh;">
       {# header... #}
       <header>
         <center-l max="var(--measure)" andText gutters>
-          <box-l padding="var(--s1)" borderWidth="0">
+          <stack-l space="var(--s1)">
             <h1>{{ title }}</h1>
-            {% if page.url !== '/' %}
+            {% if page.url !== '/' and '/stacks/' not in page.url %}
               <h2>
                 <a href="/">🌍🤖 Planet Stacks 🤖🌍</a>
               </h2>
             {% endif %}
-          </box-l>
+          </stack-l>
         </center-l>
       </header>
       {# horizontally-and-vertically-centered el... #}
