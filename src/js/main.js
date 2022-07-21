@@ -533,7 +533,7 @@ class Cover extends HTMLElement {
         styleEl.id = this.i;
         styleEl.innerHTML = `
           [data-i="${this.i}"] {
-            min-height: ${this.minHeight};
+            min-height: ${this.minHeight};          
             padding: ${!this.noPad ? this.space : '0'};
           }
       

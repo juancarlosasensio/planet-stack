@@ -135,9 +135,17 @@ stack-l {
   justify-content: flex-start;
 }
 
-stack-l>*+* {
-  margin-top: var(--s1);
-}
+/* How do we contextually add a line between els of a stack-l? */
+/* stack-l.connected > *:not(:last-child):after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 5px;
+    height: 90%;
+    top: var(--s1) * -1;
+    left: 50%;
+    display: block;
+} */
 
 /* Box custom el basic styles... */
 box-l {
@@ -680,6 +688,7 @@ pre {
   list-style: none
 }
 
+
 .docs-nav li+li {
   margin-top: var(--s-2)
 }
@@ -756,7 +765,7 @@ pre {
 
 .docs-toc>[aria-hidden] {
   position: absolute;
-  right: 1rem;
+  left: 1rem;
   top: -.75em;
   text-transform: uppercase;
   font-family: var(--font-special);
@@ -765,16 +774,17 @@ pre {
   line-height: var(--line-height-small)
 }
 
-.docs-toc.left>[aria-hidden] {
-  right: 0rem;
-  left: 1rem;
-  top: -.75em;
-}
-
 .docs-toc ul {
   padding: var(--s1) var(--s3);
   margin: 0
 }
+
+
+/* How do I create a "horizontal" list for the techStacks? */
+/* ul.horizonal > li {
+  width: var(--measure);
+  display: inline-block;
+} */
 
 .docs-toc li {
   line-height: var(--line-height-small)
@@ -1510,6 +1520,10 @@ icon-l svg {
 
 .display\:block {
   display: block !important
+}
+
+.display\:inline-block {
+  display: inline-block !important
 }
 
 .filter\:invert {
