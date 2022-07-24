@@ -44,7 +44,8 @@ nav,
 main,
 sidebar-l,
 cover-l,
-footer {
+footer,
+footer * {
   max-width: none;
 }
 
@@ -131,12 +132,17 @@ p {
 
 /* How to more easily achieve a beautiful, vertical flow and rhythm for content? https://codepen.io/piccalilli/pen/qQgxaY?editors=0110 */
 .flow {
-  --flow-space: var(--s1);
+  --flow-space: var(--s3);
 }
 
 .flow>*+* {
   margin-top: 1em;
   margin-top: var(--flow-space);
+}
+
+.flow p+p {
+  margin-top: 1em;
+  margin-top: var(--s1);
 }
 
 /* What if I want to break out of the measure? Like, for example, adding full-bleed sections? https://codepen.io/piccalilli/pen/Nmxrwv */
