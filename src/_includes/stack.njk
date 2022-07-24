@@ -2,11 +2,11 @@
 layout: base.njk
 ---
 
-<stack-l space="var(--s1)">
+<stack-l space="var(--s3)" class="width:measure">
   {% for key, value in stack %}
     {% if key === 'stack' or key === 'techStack' %}
       {% for layer, technologies in stack[key] %}
-        <div class="docs-toc left dashed" aria-labelledby="toc-title">
+        <div class="docs-toc dashed" aria-labelledby="toc-title">
           <span aria-hidden="true" id="toc-title">{{layer}}</span>
           <ul class="horizontal">
             {% for tech in technologies %}

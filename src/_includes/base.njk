@@ -9,42 +9,23 @@
     <link rel="stylesheet" href="/css/utilities.css"/>
     <link rel="stylesheet" href="/css/styles.css"/>
   </head>
-  {# Attempt at creating a base layout with Every-Layout.dev's primitives... we shall seeee! #}
-  <body>
-    <cover-l centered="main" space="var(--s3)" minHeight="100vh" noPad>
-      {# header... #}
-      <header>
-        <center-l max="var(--measure)" andText gutters>
-          <stack-l space="var(--s1)">
-            <box-l borderWidth="0px" padding="var(--s2)">
-              <h1>{{ title }}</h1>
-            </box-l>
-            {% if page.url !== '/' and '/stacks/' not in page.url %}
-              <h2>
-                <a href="/">🌍🤖 Planet Stacks 🤖🌍</a>
-              </h2>
-            {% endif %}
-          </stack-l>
-        </center-l>
-      </header>
-      {# horizontally-and-vertically-centered el... #}
-      <main>
-        <center-l>
-          {{ content | safe }}
-        </center-l>
-      </main>
 
-      {# footer #}
-      <footer>
-        <center-l max="100vw" intrinsic andText class="bg-red">
-          <box-l borderWidth="0px">
-            <h4>Add Your Stack!</h4>
-            <p>Learn how to contribute your stack by <a href="https://github.com/juancarlosasensio/planet-stack" target="_blank">visiting the repo ></a>
-            </p>
-          </box-l>
-        </center-l>
-      </footer>
-    </cover-l>
+  <body class="page-container">
+    <center-l max="var(--measure)">
+      <stack-l space="var(--s3)" class="content-container">
+        {# header... #}
+        <header>
+          <center-l max="var(--measure)" andText gutters>
+            <h1>{{ title }}</h1>
+          </center-l>
+        </header>
+        {# horizontally-and-vertically-centered el... #}
+        <main>
+          {{ content | safe }}
+        </main>
+      </stack-l>
+    </center-l>
+    {% include "footer.njk" %}
     <script src="{{ '/js/main.js' | url }}" type="text/javascript"></script>
   </body>
 </html>

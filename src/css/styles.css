@@ -65,6 +65,15 @@ p {
   margin-bottom: 0;
 }
 
+.page-container {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+
+.content-container {
+  padding: var(--s3);
+}
 
 /* Utility classes */
 /* 
@@ -74,6 +83,10 @@ p {
 */
 .max-width\:measure {
   max-width: var(--measure);
+}
+
+.width\:measure {
+  width: var(--measure);
 }
 
 .max-width\:measure\/2 {
