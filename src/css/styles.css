@@ -1,5 +1,11 @@
 /* EVERY LAYOUT STYLES BEGIN */
 /* Universal styles */
+
+:root {
+  background-color: #fefefe;
+  filter: invert(100%);
+}
+
 *,
 :after,
 :before {
@@ -11,6 +17,11 @@
   margin: 0;
   padding: 0;
   border: 0 solid;
+}
+
+img:not([src*=".svg"]),
+video {
+  filter: invert(100%);
 }
 
 * {
