@@ -12,7 +12,7 @@
 
   <body class="page-container">
     {# TODO: refactor this horrid inline style ↓↓↓... #}
-    <center-l class="content-container" style="width: 90%;">
+    <div class="content-container">
       <stack-l space="var(--s3)">
         {# header... #}
         <header class="text-align:center">
@@ -30,7 +30,7 @@
           {{ content | safe }}
         </main>
       </stack-l>
-    </center-l>
+    </div>
     {# footer... #}
     {% include "footer.njk" %}
     <script src="{{ '/js/main.js' | url }}" type="text/javascript"></script>
