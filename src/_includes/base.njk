@@ -26,7 +26,12 @@
         </header>
         {# main... #}
         <main>
-          {{ content | safe }}
+          {% block content %}
+            {{ content | safe }}
+          {% endblock %}
+          {% block pagination_nav %}
+            {{ content | safe }}
+          {% endblock %}
         </main>
       </stack-l>
     </div>

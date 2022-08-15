@@ -7,9 +7,7 @@ title: Planet Stacks
   <stack-l space="var(--s3)" class="text-align:center">
     <h2>⚡️ Weekly Highlight ⚡️</h2>
     {% for stack in stacks | randomItem %}
-      <a href="/stacks/{{ stack.title | slug }}/">
-        <h4>{{ stack.title }}</h4>
-      </a>
+      {% include "stack.njk" %}
     {% endfor %}
   </stack-l>
 </article>
