@@ -10,6 +10,7 @@ eleventyComputed:
   websiteTitle: "{{ stack.websiteTitle }}"
   websiteUrl: "{{ stack.websiteUrl }}"
 permalink: "/stacks/{{ stack.title | slug }}/"
+showStackPartialTitle: false
 ---
 
 {% extends "base.njk" %}

@@ -1,4 +1,7 @@
 <stack-l space="var(--s3)">
+  {% if showStackPartialTitle %}
+    <h2 class="text-align:center" >{{ stack.title }}</h2>
+  {% endif %}
   <stack-l space="var(--s3)" class="connected">
     {% for key, value in stack %}
       {% if key === 'stack' or key === 'techStack' %}
