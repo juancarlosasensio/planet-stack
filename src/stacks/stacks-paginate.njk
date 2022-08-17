@@ -9,26 +9,15 @@ eleventyComputed:
   twitter: "{{ stack.twitter }}"
   websiteTitle: "{{ stack.websiteTitle }}"
   websiteUrl: "{{ stack.websiteUrl }}"
-  layout: base.njk
 permalink: "/stacks/{{ stack.title | slug }}/"
 ---
 
 {% extends "base.njk" %}
 {% block content %}
-  {% include "stack.njk" %}
+  {% include "_stack.njk" %}
+  {{ content | safe }}
 {% endblock %}
 
 {% block pagination_nav %}
-  <div>
-    <cluster-l justify="space-between" align="center">
-      <div>
-        {% if pagination.href.previous %}
-          <a href="{{pagination.href.previous}}">Previous</a>
-        {% endif %}
-      </div>
-      {% if pagination.href.next %}
-        <a href="{{pagination.href.next}}">Next</a>
-      {% endif %}
-    </cluster-l>
-  </div>
+  {% include "_pagination_nav.njk" %}
 {% endblock %}

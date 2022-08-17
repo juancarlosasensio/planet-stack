@@ -29,14 +29,12 @@
           {% block content %}
             {{ content | safe }}
           {% endblock %}
-          {% block pagination_nav %}
-            {{ content | safe }}
-          {% endblock %}
+          {% block pagination_nav %}{% endblock %}
         </main>
       </stack-l>
     </div>
     {# footer... #}
-    {% include "footer.njk" %}
+    {% include "_footer.njk" %}
     <script src="{{ '/js/main.js' | url }}" type="text/javascript"></script>
   </body>
 </html>

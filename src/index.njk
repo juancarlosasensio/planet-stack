@@ -4,10 +4,10 @@ title: Planet Stacks
 ---
 
 <article>
-  <stack-l space="var(--s3)" class="text-align:center">
-    <h2>⚡️ Weekly Highlight ⚡️</h2>
+  <stack-l space="var(--s3)">
+    <h2 class="text-align:center">⚡️ Weekly Highlight ⚡️</h2>
     {% for stack in stacks | randomItem %}
-      {% include "stack.njk" %}
+      {% include "_stack.njk" %}
     {% endfor %}
   </stack-l>
 </article>
