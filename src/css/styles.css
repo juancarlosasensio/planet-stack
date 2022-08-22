@@ -794,7 +794,7 @@ pre {
 }
 
 .docs-toc.dashed {
-  border-width: (var(--border-thin));
+  border-width: var(--border-thin);
   border-style: dashed;
 }
 
