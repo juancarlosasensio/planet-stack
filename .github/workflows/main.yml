@@ -27,7 +27,7 @@ jobs:
         id: changed-files-for-src_stacks
         uses: tj-actions/changed-files@v29.0.0
         with:
-          path: '**/src/stacks'
+          path: src/stacks
 
       - name: List all added files in src/stacks dir
         run: |
