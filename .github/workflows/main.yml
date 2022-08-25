@@ -27,10 +27,10 @@ jobs:
         id: changed-files-for-src_stacks
         uses: tj-actions/changed-files@v29.0.0
         with:
-          path: src/stacks/**/*.json
+          path: '**/src/stacks'
 
       - name: List all added files in src/stacks dir
         run: |
-          for file in ${{ steps.changed-files-for-src_stacks }}; do
+          for file in ${{ steps.changed-files-for-src_stacks.added_files }}; do
             echo "$file was added"
           done
