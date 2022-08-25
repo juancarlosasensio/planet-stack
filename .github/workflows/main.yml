@@ -23,7 +23,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
         with:
-          path: src/stacks
+          path: 'src/stacks'
       
       - name: Run changed-files with defaults on the src/stacks dir
         id: changed-files-for-src_stacks
