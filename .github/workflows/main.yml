@@ -31,6 +31,6 @@ jobs:
 
       - name: List all added files in src/stacks dir
         run: |
-          for file in ${{ steps.changed-files-for-src_stacks.added_files }}; do
+          for file in ${{ steps.changed-files-for-src_stacks.outputs.added_files }}; do
             echo "$file was added"
           done
