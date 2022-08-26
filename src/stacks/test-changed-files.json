@@ -6,7 +6,8 @@
   "websiteUrl": "https://billybill.app/",
   "techStack": {
     "processing": [
-      "Micro miniprocessor"
+      "Micro miniprocessor",
+      "Chip board"
     ],
     "storage": [
       "FLASH drive",
