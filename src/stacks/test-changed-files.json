@@ -7,7 +7,8 @@
   "techStack": {
     "processing": [
       "Micro miniprocessor",
-      "Chip board"
+      "Chip board",
+      "Arduino thingy"
     ],
     "storage": [
       "FLASH drive",
