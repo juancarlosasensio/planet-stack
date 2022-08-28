@@ -67,14 +67,12 @@
 			"$id": "#root/techStack", 
 			"title": "Techstack", 
 			"type": "object",
-      "minProperties": 1,
-			"properties": {
-        "values": {
-            "type": "array",
-            "minItems": 1,
-            "uniqueItems": true,
-            "items": { "type": "string" }
-        }
+      "minProperties": 2,  
+			"additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": { "type": "string" }
 			}
 		}
 	}
