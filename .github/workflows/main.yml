@@ -27,6 +27,7 @@ jobs:
         with:
           files: |
             **/*.json
+          separator: ","
           
       - name: List changed-files json
         run: |
