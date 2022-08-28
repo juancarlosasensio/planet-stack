@@ -5,6 +5,6 @@
   "websiteTitle": "carloscharlie.com",
   "websiteUrl": "https://stevebillwoz.netlify.app/",
   "techStack": {
-    "Layer": ["Frame", "Frame"]
+    "Layer": "Frame"
   }
 }
