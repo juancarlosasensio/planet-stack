@@ -67,77 +67,13 @@
 			"$id": "#root/techStack", 
 			"title": "Techstack", 
 			"type": "object",
-			"required": [
-				"interior",
-				"exterior",
-				"power",
-				"software"
-			],
+      "minProperties": 1,
 			"properties": {
-				"interior": {
-					"$id": "#root/techStack/interior", 
-					"title": "Interior", 
-					"type": "array",
-					"default": [],
-					"items":{
-						"$id": "#root/techStack/interior/items", 
-						"title": "Items", 
-						"type": "string",
-						"default": "",
-						"examples": [
-							"Aluminum"
-						],
-						"pattern": "^.*$"
-					}
-				},
-				"exterior": {
-					"$id": "#root/techStack/exterior", 
-					"title": "Exterior", 
-					"type": "array",
-					"default": [],
-					"items":{
-						"$id": "#root/techStack/exterior/items", 
-						"title": "Items", 
-						"type": "string",
-						"default": "",
-						"examples": [
-							"Aluminum"
-						],
-						"pattern": "^.*$"
-					}
-				},
-				"power": {
-					"$id": "#root/techStack/power", 
-					"title": "Power", 
-					"type": "array",
-					"default": [],
-					"items":{
-						"$id": "#root/techStack/power/items", 
-						"title": "Items", 
-						"type": "string",
-						"default": "",
-						"examples": [
-							"Drive train"
-						],
-						"pattern": "^.*$"
-					}
-				},
-				"software": {
-					"$id": "#root/techStack/software", 
-					"title": "Software", 
-					"type": "array",
-					"default": [],
-					"items":{
-						"$id": "#root/techStack/software/items", 
-						"title": "Items", 
-						"type": "string",
-						"default": "",
-						"examples": [
-							"JavaScript"
-						],
-						"pattern": "^.*$"
-					}
-				}
+        "values": {
+            "type": "array",
+            "minItems": 2,
+            "items": { "type": "string" }
+        }
 			}
 		}
 
