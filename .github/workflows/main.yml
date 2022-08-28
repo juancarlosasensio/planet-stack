@@ -26,7 +26,7 @@ jobs:
         uses: tj-actions/changed-files@v29.0.1
         with:
           files: |
-            **/*.json
+            **/src/stacks/**/*.json
           separator: ","
           
       - name: List changed-files json
