@@ -5,7 +5,7 @@
   "websiteTitle": "carloscharlie.com",
   "websiteUrl": "https://stevebillwoz.netlify.app/",
   "techStack": {
-    "Layer": ["Frame", "Frame"],
-    "Layer": ["Rotor", "Rotor"]
+    "Frame": ["Aluminum"],
+    "Navigation": ["GPS", "Rotor"]
   }
 }
