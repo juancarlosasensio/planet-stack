@@ -22,9 +22,6 @@ jobs:
       - name: Get changed files
         id: changed-files-json
         uses: tj-actions/changed-files@v29.0.1
-        with:
-          files: |
-            *.json
 
       - name: List all changed files
         run: |
