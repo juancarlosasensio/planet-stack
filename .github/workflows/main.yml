@@ -34,3 +34,9 @@ jobs:
           for file in ${{ steps.changed-files-json.outputs.all_changed_files }}; do
             echo "$file was changed"
           done
+
+      - name: Validate JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: src/stack-schema.json
+          INPUT_JSONS: ${{ steps.changed-files-json.outputs.all_changed_files }}

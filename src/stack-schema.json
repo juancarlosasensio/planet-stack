@@ -1,0 +1,145 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1661697770.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"title",
+		"author",
+		"twitter",
+		"websiteTitle",
+		"websiteUrl",
+		"techStack"
+	],
+	"properties": {
+		"title": {
+			"$id": "#root/title", 
+			"title": "Title", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"Tesla Test"
+			],
+			"pattern": "^.*$"
+		},
+		"author": {
+			"$id": "#root/author", 
+			"title": "Author", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"Sir Elon"
+			],
+			"pattern": "^.*$"
+		},
+		"twitter": {
+			"$id": "#root/twitter", 
+			"title": "Twitter", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"toysoldier182"
+			],
+			"pattern": "^.*$"
+		},
+		"websiteTitle": {
+			"$id": "#root/websiteTitle", 
+			"title": "Websitetitle", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"juancarlosasensio.com"
+			],
+			"pattern": "^.*$"
+		},
+		"websiteUrl": {
+			"$id": "#root/websiteUrl", 
+			"title": "Websiteurl", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"https://juancarlosasensio.netlify.app/"
+			],
+			"pattern": "^.*$"
+		},
+		"techStack": {
+			"$id": "#root/techStack", 
+			"title": "Techstack", 
+			"type": "object",
+			"required": [
+				"interior",
+				"exterior",
+				"power",
+				"software"
+			],
+			"properties": {
+				"interior": {
+					"$id": "#root/techStack/interior", 
+					"title": "Interior", 
+					"type": "array",
+					"default": [],
+					"items":{
+						"$id": "#root/techStack/interior/items", 
+						"title": "Items", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Aluminum"
+						],
+						"pattern": "^.*$"
+					}
+				},
+				"exterior": {
+					"$id": "#root/techStack/exterior", 
+					"title": "Exterior", 
+					"type": "array",
+					"default": [],
+					"items":{
+						"$id": "#root/techStack/exterior/items", 
+						"title": "Items", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Aluminum"
+						],
+						"pattern": "^.*$"
+					}
+				},
+				"power": {
+					"$id": "#root/techStack/power", 
+					"title": "Power", 
+					"type": "array",
+					"default": [],
+					"items":{
+						"$id": "#root/techStack/power/items", 
+						"title": "Items", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Drive train"
+						],
+						"pattern": "^.*$"
+					}
+				},
+				"software": {
+					"$id": "#root/techStack/software", 
+					"title": "Software", 
+					"type": "array",
+					"default": [],
+					"items":{
+						"$id": "#root/techStack/software/items", 
+						"title": "Items", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"JavaScript"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+		}
+
+	}
+}
