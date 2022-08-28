@@ -1,0 +1,11 @@
+{
+  "title": "Bad FPV Drone Stack",
+  "author": "Carlos Charlie",
+  "twitter": "carloscharlie",
+  "websiteTitle": "carloscharlie.com",
+  "websiteUrl": "https://stevebillwoz.netlify.app/",
+  "techStack": {
+    "Frame": ["Aluminum"],
+    "Navigation": ["GPS", "Rotor"]
+  }
+}
