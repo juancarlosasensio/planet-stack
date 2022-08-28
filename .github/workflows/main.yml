@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '**.json'
   pull_request:
     branches:
       - main
@@ -24,8 +26,8 @@ jobs:
         uses: tj-actions/changed-files@v29.0.1
         with:
           files: |
-            *.json
-
+            **/*.json
+          
       - name: List all changed files
         run: |
           for file in ${{ steps.changed-files-json.outputs.all_changed_files }}; do
