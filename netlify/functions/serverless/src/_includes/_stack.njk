@@ -1,0 +1,24 @@
+<stack-l space="var(--s3)">
+  {% if showStackPartialTitle %}
+    <h2 class="text-align:center" >{{ stack.title }}</h2>
+  {% endif %}
+  <stack-l space="var(--s3)" class="connected">
+    {% for key, value in stack %}
+      {% if key === 'stack' or key === 'techStack' %}
+        {% for layer, technologies in stack[key] %}
+          <div class="docs-toc dashed" aria-labelledby="toc-title">
+            <span aria-hidden="true" id="toc-title">{{layer}}</span>
+            <ul class="horizontal">
+              {% for tech in technologies %}
+                <li>{{tech}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </stack-l>
+  {% block pagination_nav %}
+    {{pagination_nav | safe}}
+  {% endblock %}
+</stack-l>

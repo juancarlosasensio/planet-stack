@@ -11,3 +11,4 @@ public
 # macOS related files
 .DS_Store
 
+oauth2.keys.json
