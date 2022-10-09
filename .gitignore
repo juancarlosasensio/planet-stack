@@ -11,4 +11,9 @@ public
 # macOS related files
 .DS_Store
 
+# Oauth stuff...
 oauth2.keys.json
+
+# Netlify serverless
+netlify/functions/dynamic/** 
+!netlify/functions/dynamic/index.js
